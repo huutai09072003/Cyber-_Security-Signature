@@ -1,0 +1,19 @@
+<!-- app/views/files/new.html.erb -->
+<h1>Chọn File để Quét Virus</h1>
+
+<%= form_with url: files_path, local: true, multipart: true do |form| %>
+  <div>
+    <%= form.label :file, "Chọn file:" %>
+    <%= form.file_field :file %>
+  </div>
+
+  <div>
+    <%= form.submit "Quét File" %>
+  </div>
+<% end %>
+
+<% if flash[:notice] %>
+  <p style="color: green;"><%= flash[:notice] %></p>
+<% elsif flash[:alert] %>
+  <p style="color: red;"><%= flash[:alert] %></p>
+<% end %>
