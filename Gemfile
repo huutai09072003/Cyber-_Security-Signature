@@ -19,6 +19,8 @@ gem "jbuilder"
 gem "devise", ">= 4.9.4"
 gem "httparty"
 gem "digest"
+gem "pry"
+gem "figaro"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 

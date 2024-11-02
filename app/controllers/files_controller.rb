@@ -4,6 +4,7 @@ class FilesController < ApplicationController
   end
 
   def create
+    binding.pry
     file = params[:file]
     if file
       service = VirusTotalService.new(ENV["VIRUSTOTAL_API_KEY"])
